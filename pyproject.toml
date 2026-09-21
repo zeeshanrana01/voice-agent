@@ -1,0 +1,24 @@
+[project]
+name = "voice-agent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { email = "zeeshanrana2014@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "livekit-agents>=1.8.2",
+    "livekit-plugins-ai-coustics>=0.3.2",
+    "python-dotenv>=1.2.3",
+]
+
+[project.scripts]
+voice-agent = "agent:main"
+
+[tool.vercel]
+entrypoint = "agent.py"
+
+[build-system]
+requires = ["uv_build>=0.12.17,<0.13.0"]
+build-backend = "uv_build"
